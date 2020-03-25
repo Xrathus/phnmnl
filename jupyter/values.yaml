@@ -23,9 +23,9 @@
 # helm install --set use_ingress="yes",domain="mydomain.dev",external_ingress_controller="yes"
 
 # Jupyter deployment
-jupyter_image_registry: "container-registry.phenomenal-h2020.eu/"
-jupyter_image: "phnmnl/jupyter"
-jupyter_image_tag: ":v387f29b6ca83_cv0.4.7"
+jupyter_image_registry: "xrathus/"
+jupyter_image: "jupyter_phnmnl"
+jupyter_image_tag: ":latest"
 jupyter_pull_policy: "Always"
 jupyter_internal_port: 8888
 jupyter_external_port: 8888
