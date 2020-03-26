@@ -113,7 +113,7 @@ entries:
     created: 2018-03-06T14:20:01.105987094+01:00
     description: Distributed object storage server built for cloud applications and
       devops.
-    digest: db76a6e746d312eed846ad859682b5d431ac755ce6519fd89808955ba444b0d0
+    #digest: db76a6e746d312eed846ad859682b5d431ac755ce6519fd89808955ba444b0d0
     home: https://minio.io
     icon: https://www.minio.io/img/logo_160x160.png
     keywords:
