@@ -116,13 +116,13 @@ persistence:
 ## ref: http://kubernetes.io/docs/user-guide/services/
 ##
 
-serviceType: LoadBalancer
-servicePort: 9000
+#serviceType: LoadBalancer
+#servicePort: 9000
 
-#service:
-#  type: ClusterIP
+service:
+  type: LoadBalancer
 #  clusterIP: ~
-#  port: 9000
+  port: 9000
 #  nodePort: 31311
 
   ## List of IP addresses at which the Prometheus server service is available
@@ -131,7 +131,7 @@ servicePort: 9000
 #  externalIPs: []
   #   - externalIp1
 
-#  annotations: {}
+  annotations: {}
     # prometheus.io/scrape: 'true'
     # prometheus.io/path:   '/minio/prometheus/metrics'
     # prometheus.io/port:   '9000'

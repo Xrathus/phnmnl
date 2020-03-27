@@ -9,7 +9,7 @@ metadata:
     heritage: {{ .Release.Service }}
 {{- if .Values.service.annotations }}
   annotations:
-{{ toYaml .Values.service.annotations | indent 4 }}
+{{ toYaml $.Values.service.annotations | indent 4 }}
 {{- end }}
 spec:
 {{- if (or (eq .Values.service.type "ClusterIP" "") (empty .Values.service.type)) }}
