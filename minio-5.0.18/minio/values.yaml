@@ -106,10 +106,10 @@ persistence:
   accessMode: ReadWriteOnce
   size: 10Gi
 
-  ## If subPath is set mount a sub folder of a volume instead of the root of the volume.
-  ## This is especially handy for volume plugins that don't natively support sub mounting (like glusterfs).
-  ##
-  subPath: ""
+## If subPath is set mount a sub folder of a volume instead of the root of the volume.
+## This is especially handy for volume plugins that don't natively support sub mounting (like glusterfs).
+##
+subPath: ""
 
 ## Expose the Minio service to be accessed from outside the cluster (LoadBalancer service).
 ## or access it from within the cluster (ClusterIP service). Set the service type and the port to serve it.
@@ -378,7 +378,7 @@ podDisruptionBudget:
 ## Specify the service account to use for the Minio pods. If 'create' is set to 'false'
 ## and 'name' is left unspecified, the account 'default' will be used.
 serviceAccount:
-  create: true
+  create: false
   ## The name of the service account to use. If 'create' is 'true', a service account with that name
   ## will be created. Otherwise, a name will be auto-generated.
   name:
