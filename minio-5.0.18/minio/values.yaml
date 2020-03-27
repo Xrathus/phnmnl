@@ -120,10 +120,10 @@ subPath: ""
 #servicePort: 9000
 
 service:
-  type: LoadBalancer
-#  clusterIP: ~
+  type: ClusterIP
+  clusterIP: ~
   port: 9000
-#  nodePort: 31311
+  nodePort: 31311
 
   ## List of IP addresses at which the Prometheus server service is available
   ## Ref: https://kubernetes.io/docs/user-guide/services/#external-ips
