@@ -8,7 +8,7 @@ fullnameOverride: ""
 
 ## set kubernetes cluster domain where minio is running
 ##
-clusterDomain: cluster.local
+#clusterDomain: cluster.local
 
 ## Set default image, imageTag, and imagePullPolicy. mode is used to indicate the
 ##
@@ -54,8 +54,8 @@ priorityClassName: ""
 ## Distributed Minio ref: https://docs.minio.io/docs/distributed-minio-quickstart-guide
 ##
 existingSecret: ""
-accessKey: "AKIAIOSFODNN7EXAMPLE"
-secretKey: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+accessKey: "minio"
+secretKey: "minio123"
 certsPath: "/etc/minio/certs/"
 configPathmc: "/etc/minio/mc/"
 configPath: ""
@@ -101,8 +101,8 @@ persistence:
   ##
   ## Storage class of PV to bind. By default it looks for standard storage class.
   ## If the PV uses a different storage class, specify that here.
-  storageClass: ""
-  VolumeName: ""
+  #storageClass: ""
+  #VolumeName: ""
   accessMode: ReadWriteOnce
   size: 10Gi
 
@@ -120,10 +120,11 @@ subPath: ""
 #servicePort: 9000
 
 service:
-  type: ClusterIP
-  clusterIP: ~
+  type: LoadBalancer
+  #type: ClusterIP
+  #clusterIP: ~
   port: 9000
-  nodePort: 31311
+  #nodePort: 31311
 
   ## List of IP addresses at which the Prometheus server service is available
   ## Ref: https://kubernetes.io/docs/user-guide/services/#external-ips
@@ -281,10 +282,6 @@ b2gateway:
 ## Use this field to add environment variables relevant to Minio server. These fields will be passed on to Minio container(s)
 ## when Chart is deployed
 environment:
-  ## Please refer for comprehensive list https://docs.minio.io/docs/minio-server-configuration-guide.html
-
-
-minioConfig:
   region: "us-east-1"
   browser: "on"
   domain: ""
@@ -363,6 +360,11 @@ minioConfig:
     clientId: ""
     username: ""
     password: ""
+  ## Please refer for comprehensive list https://docs.minio.io/docs/minio-server-configuration-guide.html
+
+
+#minioConfig:
+  
 
 networkPolicy:
   enabled: false
