@@ -1,4 +1,5 @@
 #!/bin/sh
+echo "Testing1"
 set -e ; # Have script exit in the event of a failed command.
 
 {{- if .Values.configPathmc }}
