@@ -277,11 +277,11 @@ b2gateway:
 ## Use this field to add environment variables relevant to Minio server. These fields will be passed on to Minio container(s)
 ## when Chart is deployed
 environment:
-  MINIO_REGION: "us-east-1"
+  MINIO_REGION_NAME: "us-east-1"
   MINIO_BROWSER: "on"
   MINIO_DOMAIN: ""
-  MINIO_STANDARDSTORAGECLASS: ""
-  MINIO_REDUCEDREDUNDANCYSTORAGECLASS: ""
+  MINIO_STORAGE_CLASS_STANDARD: ""
+  #MINIO_REDUCEDREDUNDANCYSTORAGECLASS: ""
   ## Please refer for comprehensive list https://docs.minio.io/docs/minio-server-configuration-guide.html
 
 networkPolicy:
